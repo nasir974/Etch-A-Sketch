@@ -29,6 +29,7 @@ html, body{
     border-radius: 0.2em;
     display: grid;
     justify-self: center;
+    overflow: hidden ;
 }
 .grid-item{
     border: solid 0.1px rgba(14, 14, 13, 0.034);
@@ -75,7 +76,9 @@ html, body{
     .sketch-container{
         max-width: 900px;
         grid-column: 3;
-
+    }
+    .grid{
+        height: 100%;
     }
     .grid-slider{
         width: 40%;

@@ -23,7 +23,7 @@ function newGrid(){
             grid.style= `
             grid-template-columns:  repeat(${size},1fr);
             grid-template-rows: repeat(${size},1fr);`;
-            grid.appendChild(gridItem);
+            grid.append(gridItem);
         
       };
 };
@@ -50,9 +50,16 @@ function changeDivBg(){
 };     
 changeDivBg();
 
+
 eraserBtn.addEventListener('click', ()=>{
             grid.addEventListener('mouseover', (e)=>{
-                  e.target.style=`background: none;`; },false);  
+                  e.target.addEventListener('mouseenter',()=>{
+                        e.target.style=`background: none;`; 
+                  },false);
+                  e.target.addEventListener('mouseleave',()=>{
+                        e.target.style=`background: none;`;  
+                  },false);
+            },false);      
 },false);
 pointerBtn.addEventListener('click', ()=>{
             grid.addEventListener('mouseover', (e)=>{
@@ -77,7 +84,6 @@ randomBtn.addEventListener('click', ()=>{
 },false);
 colorBtn.addEventListener('click', ()=>{
             grid.addEventListener('mouseover', (e)=>{
-                  let randomColor= "#" + ("00000" + Math.floor(Math.random() * Math.pow(16, 6)).toString(16)).slice(-6);
                   e.target.addEventListener('mouseenter',()=>{
                         e.target.style=`background:#E05D5D;`; 
                   },false);
