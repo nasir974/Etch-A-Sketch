@@ -4,7 +4,7 @@ html, body{
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    color: #393232;
+    color: black;
     background-color: #F2EDD7;
 }
 .main-container{
@@ -24,7 +24,7 @@ html, body{
     grid-column: 2;
     height: 100%;
     width: 100%;
-    border: solid 1px none;
+    border: solid 1px #3A6351;
     border-radius: 0.2em;
     display: grid;
     justify-self: center;
