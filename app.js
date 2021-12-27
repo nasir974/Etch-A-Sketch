@@ -86,17 +86,7 @@ colorBtn.addEventListener('click', ()=>{
                   },false);
                   },false);     
 },false);
-rollerBtn.addEventListener('click', ()=>{
-      grid.addEventListener('mouseover', (e)=>{
-       e.target.addEventListener('mouseenter',()=>{
-       e.target.style=`background:#E05D5D;`; 
-       },false);
-      e.target.addEventListener('mouseleave',()=>{
-            e.target.style=`background: 	hsl(0, 0%, 65%);`;  
-           
-       },false);
-      },false); 
- },false);     
+
 
 
 
