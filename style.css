@@ -9,21 +9,24 @@ html, body{
     scroll-behavior: smooth;
 }
 .main-container{
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 40px 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
 }
 .sketch-container{
     text-align: center;
-    background-color: #F2EDD7;
+    background-color: #F2EDD7; 
     display: grid;
-    grid-template-columns: 0.3fr 5fr 0.3fr;
-    grid-template-rows: 0.5fr 5fr 1fr;
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7fr 1fr;  
+    width: 50%;
+    height: 95vh;
 }
 .grid{
     grid-row: 2;
-    grid-column: 2;
-    height: 90%;
+    height: 100%;
     width: 100%;
     border: solid 1px #3A6351;
     border-radius: 0.2em;
@@ -36,17 +39,22 @@ html, body{
     
 }
 .header{
-    grid-row: 1;
-    grid-column: 2;
     text-align: center;
+    color:white ;
+    background-color: #3A6351;
+    width: 100%;
+    padding:1em;
+    font-size: 1.1rem;
+    width: 94%;
+    letter-spacing: 0.6em;
 }
-.grid-slider, .grid-size{
+.slider-container{
     grid-row: 3;
-    grid-column: 2;
-}
-.grid-slider{
-    width: 70%;
+    width: 100%;
     justify-self: center;
+}
+input{
+    width: 50%;
 }
 
 .sidebar{
@@ -55,10 +63,11 @@ html, body{
     justify-content: space-evenly;
     align-items: center;
     display: flex;
-    /* gap: 3em; */
     flex-direction: column;
     height: 50vh;
     align-self: center;
+    width: 3em;
+    border-radius: 0.4em;
 }
 
 .color-container{
@@ -69,23 +78,36 @@ html, body{
     font-size: 1.5rem;
     cursor: pointer;
 }
-@media screen and (min-width:900px) {
+footer{
+    margin: 0;
+   text-align: center;
+    margin-left: 3em;
+}
+footer a{
+    text-decoration: none;
+    color: black;
+}
+@media(max-width: 40em){
     .main-container{
-        grid-template-columns: 0.2fr 50px 1fr;
+        gap:0.3em;
+        justify-content: space-between;
     }
     .sketch-container{
-        max-width: 900px;
-        grid-column: 3;
+        height: 90vh;
+        width: 100%;
+        margin: 0.3em;
+       
     }
     .grid{
-        height: 100%;
+        height: 50vh;
     }
-    .grid-slider{
-        width: 40%;
+    .header{
+        padding:0.7em;
+        font-size: 1rem;
+        width: 95%;
+        letter-spacing: 0.6em;
     }
     .sidebar{
-        grid-column: 2;
-        border-radius: 0.2em;
+        height: 40vh;
     }
-    
 }
